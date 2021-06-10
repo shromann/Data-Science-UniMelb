@@ -1,0 +1,77 @@
+Question 1:
+1. Supervised learning is when you train a learner with pre-existing classfied data. On the other hand, Unsupervised learning is when you try to classify data without any labeled data, rather try to understand patterns/groups/clusters of data. K-nn is a unsupervised learning method as we try classifying data thru the nearest training instances without any class labels. Naive Bayes is supervised as we calculate the prior and posterior probabilities w.r.t class labels.
+
+2. attributes/features are the data fileds, for example, person, age, height... are all attribute. Its relation to instances is that instances are real data values in the context of the attribute. so person1, 8, 77, person2, 10, 45 are all instances with the attributes.
+
+3. we can use one-hot encoding to map categorical data to a vector space and use some type of similarity/disimilarity measure, such as manhattan distance. 
+
+4. a softmax fucntion can be used in the last layer of a neural network to output the models decided classification.
+
+5. -
+
+6. A neural network would need to have simply one neuron, which would make it equivalent to a perceptron, and use an activation function of wx + b. 
+
+7. -
+
+8. There are multiple ways of doing this. two of which is where you can assign a differnet ranges of a linear regression output to differnt classes. Another way can be the transformation of categorical data to continious data and reading off the specified classes ranges.
+
+9. - cheat sheet
+
+10. Perhaps weather forcasting would be a structual classification task. the assumption we make is that there exists a "structure" the last instance and the next one.
+
+11. - 
+
+Question 2:
+1. Entropy measures the certainty/unpredictibility of a given data in bits. For decision trees, it tries to reduce the entropy as you traverse down the tree, ultimately being more certain of its final classification.
+
+2. We simply traverse down the tree and classify with One-R of the final reached leaf node. For missing values, we would try to find the longest chain in the tree with the values we have and classify with it's leaf.
+
+3. Naive bayes and Nearest Protoype are dysfunctional in the absnce of data and rely on smoothning techniques. Decsion Trees does a type of majority voting on the given test instance. and see where does the test instance lie with the given infromation. We can be more certian with decision trees than naive bayes as it reduces entropy in each layer (hopefully)
+
+4
+a. Random Forests consist of a collection Random Trees, which are decision trees, with some attributes removed. Decision trees is just one tree, a random forest gets the views of multiple random trees and takes a type of voting.
+
+b. Since it takes the verification of multiple random trees, it is less likeley to overfit/underfit. As decision trees are heaviliy reliant on trianing instances. 
+
+Question 3:
+1. Gradient Decent is used in paramter estimation of logistic regression.
+
+2 Gradient Decent is used to estimate the parameters of logistic regression. It is used to minimise the error in predicted classfication and its true classsification. 
+
+3. A very small learning rate will lead to many computational iterations and take more time to reach the optimal solution, as its undershooting. on the other hand, a large value will overshot and also take more time.
+
+Question 4:
+1. Support vectors are vectors that are used to calculate the margins of a SVM. The margins are supposed to maximise their distances from the support vectors of different classes as this reduces the uncertainty of misclassification thru more space. if the test instances are behind the support vectors and margin, then the test instance would be classified wiht the group with high certainty, however if the test instance lied between the margin and support vector, it would still be classified with that group but now with low certainty. 
+
+2. Support vector and nearest prototype can make the same predictions as in SVM, a test instance would happen to be with closer other points  who share similar values, this is equivalent to neartest prototype as it classifies w.r.t its closest points, who also happen to be part of a cluster. SVM can be superrior if the data is not linearly seprable. as SVM can use a kernal transformation funciton and make data linearly seprable.
+
+3. if SVM had a kernal hyperparameter that divides the data into two seprate parts. ---
+
+Question 5:
+1. - 
+2. - 
+
+Question 6:
+1. - 
+2. - 
+
+Question 7:
+1. -
+2. -
+
+Question 8; 
+1. -
+2. - 
+
+Question 9:
+1. -
+2. -
+
+Question 8; 
+1. -
+2. - 
+
+Question 9:
+- Neural Network, CNN. assumption??
+- RUn on test data, cross valdaion...
+- Have them classify the data that doesnt seem to over/underfit. check the classification again...
