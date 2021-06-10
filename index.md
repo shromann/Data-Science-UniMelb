@@ -6,3 +6,6 @@ A Collection of Notes for Data Science Capstone Subjects at UniMelb (2021). Enjo
 - **COMP30024**: [Artificial Intelligence](https://github.com/shromann/Data-Science-UniMelb/tree/main/COMP30024)
 - **COMP30027**: [Machine Learning](https://github.com/shromann/Data-Science-UniMelb/tree/main/COMP30027)
 - **MAST30025**: [Linear Statistical Modelling](https://github.com/shromann/Data-Science-UniMelb/tree/main/MAST30025)
+
+--
+**note**: old Computer Science are in [Computer-Science-UniMelb](https://github.com/shromann/Computer-Science-UniMelb)!
