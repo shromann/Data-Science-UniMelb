@@ -1,0 +1,107 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,fullpage}
+
+\newcommand{\bemat}{\left[\begin{array}}
+\newcommand{\enmat}{\end{array}\right]}
+\newcommand{\be}{\beta}
+\newcommand{\B}{\boldsymbol\beta}
+\newcommand{\e}{\varepsilon}
+\newcommand{\E}{\boldsymbol\varepsilon}
+\newcommand{\tb}{\mathbf{t}}
+\newcommand{\y}{\mathbf{y}}
+\newcommand{\z}{\mathbf{z}}
+\newcommand{\0}{\mathbf{0}}
+
+
+\begin{document}
+
+\begin{centering}
+
+\LARGE MAST30025 Linear Statistical Models
+
+\vspace{0.5cm}
+
+\Large Assignment 3, 2021
+
+\end{centering}
+
+\vspace{0.5cm}
+
+\begin{enumerate}
+	\item	Let $A$ be an $n \times p$ matrix with $n \geq p$.
+	\begin{enumerate}
+		\item Show directly that $r(A^c A) = r(A)$.
+		\item Show directly that $A^c A$ is idempotent.
+		\item Show directly that $A(A^TA)^c A^T$ is unique (invariant to the choice of conditional inverse).
+	\end{enumerate}
+
+\item We are interested in examining the lifetime of three different types of bulb (in 1000 hours). A study is conducted and the following data obtained:
+
+\vspace{0.2cm}
+
+\begin{tabular}{ccc}
+\multicolumn{3}{c}{Bulb type} \\
+1 & 2 & 3 \\
+\hline
+22 & 16 & 28 \\
+23 & 18 & 27 \\
+24 & 19 & 29 \\
+22 &    & 29 \\
+26
+\end{tabular}
+
+\vspace{0.2cm}
+
+We fit the model
+\[y_{ij} = \mu + \tau_i + \e_{ij},\]
+where $\mu$ is the overall mean and $\tau_i$ is the effect of the $i$th type of bulb.
+
+\vspace{0.2cm}
+
+\textbf{For this question, you may NOT use the \texttt{lm} function in R.}
+
+	\begin{enumerate}
+	\item Find a conditional inverse for $X^TX$, using the algorithm given in Theorem 6.2.\label{condin}
+	\item Find $s^2$.
+	\item Is $\mu + 2\tau_1 + \tau_2$ estimable?
+	\item Find a 90\% confidence interval for the lifetime of the 2nd type of bulb.
+	\item Test the hypothesis that there is no difference in lifetime between 1st and 3rd types of bulb, at the 5\% significance level.
+	\end{enumerate}
+
+
+
+\item Consider a linear model with only categorical predictors, written in matrix form as $\y = X_1 \B_1 + \E_1$. Suppose we add some continuous predictors, resulting in an expanded model $\y = X \B + \E$. 
+	
+	Now consider a quantity $\tb^T\B$, where $\tb^T = [\tb_1^T|\tb_2^T]$ is partitioned according to the categorical and continuous predictors. Show that if $\tb_1^T\B_1$ is estimable in the first model, then $\tb^T\B$ is estimable in the second model.
+
+	If you write $X = [X_1 | X_2]$, you may assume that $r(X) = r(X_1) + r(X_2)$.
+
+	\vspace{0.2cm}
+
+	\emph{Hint: Use Theorems 6.9 and 6.3. For any vectors $\z_1$ and $\z_2$, you can write \[\bemat{cc|c} X_1^T X_1 & X_1^T X_2 & X_1^T X_1 \z_1 \\ X_2^T X_1 & X_2^T X_2 & X_2^T X_2 \z_2 \enmat = \bemat{cc} X_1^T & \0 \\ \0 & X_2^T\enmat\bemat{cc|c} X_1 & X_2 & X_1 \z_1 \\ X_1 & X_2 & X_2 \z_2 \enmat.\]}
+
+
+
+\item Data was collected on the world record times (in seconds) for the one-mile run. For males, the records are from the period 1861--1999, and for females, from the period 1967--1996. The data is given in the file \texttt{mile.csv}, available on the LMS.
+
+\begin{enumerate}
+	\item Plot the data, using different colours and/or symbols for male and female records. Without drawing diagnostic plots, do you think that this data satisfies the assumptions of the linear model? Why or why not?
+	\item Test the hypothesis that there is no interaction between the two predictor variables. Interpret the result in the context of the study.
+	\item Write down the final fitted models for the male and female records. Add lines corresponding to these models to your plot from part (a).
+	\item Calculate a point estimate for the year when the female world record will equal the male world record. Do you expect this estimate to be accurate? Why or why not?
+	\item Is the year when the female world record will equal the male world record an estimable quantity? Is your answer consistent with part (d)?
+	\item Calculate a 95\% confidence interval for the amount by which the gap between the male and female world records narrow every year.
+	\item Test the hypothesis that the male world record decreases by 0.4 seconds each year. 
+\end{enumerate}
+
+
+\item You wish to perform a study to compare 2 medical treatments (and a placebo) for a disease. Treatment 1 is an experimental new treatment, and costs \$5000 per person. Treatment 2 is a standard treatment, and costs \$2000 per person. Treatment 3 is a placebo, and costs \$1000 per person. You are given \$100,000 to complete the study. You wish to test if the treatments are effective, i.e., $H_0: \tau_1 = \tau_2 = \tau_3$.
+
+	\begin{enumerate}
+		\item Determine the optimal allocation of the number of units to assign to each treatment.
+		\item Perform the random allocation. You must use R for randomisation and include your R commands and output.
+	\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
