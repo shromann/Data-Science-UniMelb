@@ -1,7 +1,6 @@
-# Data-Science-UniMelb
-> by Shromann Majumder
+# Data Science @ UniMelb
 
-A Collection of Notes for Data Science Capstone Subjects at UniMelb (2021). Enjoy :)
+A _Collection of Notes_ for Data Science Capstone Subjects, along with _some_ comp electives at **UniMelb** (2021). Enjoy :)
 
 - **COMP30024**: [Artificial Intelligence](https://github.com/shromann/Data-Science-UniMelb/tree/main/COMP30024)
 - **COMP30027**: [Machine Learning](https://github.com/shromann/Data-Science-UniMelb/tree/main/COMP30027)
