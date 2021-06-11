@@ -1,3 +1,5 @@
+> All Materials Available in [COMP30024](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/)
+
 # Complex Decisions      
 ## Mechanism Design
 > The problem of how to design a "game" that maximizes a global utility function in a multi-agent system, given each agent goes for their own strategy
