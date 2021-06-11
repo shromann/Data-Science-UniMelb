@@ -5,6 +5,7 @@
 -  In AI, the aim is to make smart systems out of simpler systems to do things beyond simple single system. 
 
 - This subject only deals with *Auctions*
+- Utility functon means What I Paid - How Much I value it. Smaller the better 
 
 ###  Types of Mechanism Design problems
 1. **Single Item Auctions**: standard auction where person $i$ values the sale item at $v_i$ and private to $i$. Now how do we design the rules get equilibrium outcome that is good for the *auctioneer* and *bidders*.
