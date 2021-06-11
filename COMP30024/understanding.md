@@ -58,7 +58,6 @@ A mechanism for an auction consists of
 - These agents need a representation language for bids
 
 ### Types of Auctions
-<<<<<<< HEAD
 1. **English Auction**
    - ascending
    - first-price
@@ -104,10 +103,3 @@ A mechanism for an auction consists of
      - **NO** **winner's curse**: Due to bounds
      - harder to **Collusion**: *bidder* can't see shit cause its sealed
      - computational simplicity makes it popular for use in multi-agent AI systems and on-line auctions.
-
-=======
-1. English Auction: Ascending bid
-2. Dutch Auction: Descending bid
-3. First-priced sealed bid auction: One-Shot Bid
-4. Vicerey Auction: Second Price bidding
->>>>>>> 114bbee80ba271f1020508037b2223e76b9aa733
