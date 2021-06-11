@@ -56,7 +56,49 @@ A mechanism for an auction consists of
 - These agents need a representation language for bids
 
 ### Types of Auctions
-1. English Auction: Ascending bid
-2. Dutch Auction: Descending bid
-3. First-priced sealed bid auction: One-Shot Bid
-4. Vicerey Auction: Second Price bidding
+1. **English Auction**
+   - ascending
+   - first-price
+   - open-cry
+   - kinda waiting for bids. 
+   - **Dominant Strategy**: keep bidding in small bids until cost < value
+   - **Properties**:
+     - **efficient**: Good auction unless the starting bid is too high (bad for bidder), or too low (bad for auctioneer). 
+     - may occur **winner's curse**: paying too much, a lot above other bidders value rather than just a bit up and enough to win.
+     - *susceptible* to **Collusion**:
+       - *bidder* can agree beforehand to keep bids artificially low
+       - *auctioneers* can plant "dummy" bidders to raise prices. 
+2. **Dutch Auction:**
+   - descending
+   - open-cry
+   - good for a fast paced auction
+   - auctioneer start with a VERY HIGH PRICE, then slowly lowers the price. It ends when someone pays at the current price. Here the auctioneer is changing the price, and bidder just wait and choose. 
+   - **Properties**:
+     - **efficient**: Amazing for auctioneer but bad for bidder cause more likely for winners curse. 
+     - **winner's curse**: paying too much, a lot above other bidders value rather than just a bit up and enough to win.
+     - *susceptible* to **Collusion**:
+       - *bidder* can agree beforehand to keep bids artificially low
+       - *auctioneers* can plant "dummy" bidders to raise prices. 
+3. **First-priced sealed bid auction**
+   - each bidder bids **only** once.
+   - sent to auctioneer without sharing.
+   - sealed-bid
+   - price paid by winner with the highest bid
+   - **Dominant Strategy**: don't know, but be true to yourself and bid less than your true value. might result in a bit of winners curse if your value is higher than others.
+   - used for *governments contracts*
+   - **Properties**:
+     - **not efficient**: since agent with the highest value may lose.
+     - **winner's curse**: paying too much, a lot above other bidders value rather than just a bit up and enough to win.
+     - ***not susceptible*** to **Collusion**:
+       - *bidder* can't see shit 
+4. **Vicerey Auction: Second Price bidding**
+   - second-price
+   - sealed-bid
+   - winner pays the price with the second highest price.
+   - **Dominant Strategy**: go straight for the value, going over it might lead to winners curse if the second highest is also above the value. But going your bid, will deffs not be winners curse due cause your bid acts as a bound. 
+   - **Properties**:
+     - **efficient** & **truth-revealing**: since dominant strategy is to bid your value.
+     - **NO** **winner's curse**: Due to bounds
+     - harder to **Collusion**: *bidder* can't see shit cause its sealed
+     - computational simplicity makes it popular for use in multi-agent AI systems and on-line auctions.
+
