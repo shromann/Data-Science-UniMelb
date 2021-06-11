@@ -101,3 +101,4 @@ A mechanism for an auction consists of
      - **NO** **winner's curse**: Due to bounds
      - harder to **Collusion**: *bidder* can't see shit cause its sealed
      - computational simplicity makes it popular for use in multi-agent AI systems and on-line auctions.
+
