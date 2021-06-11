@@ -1,3 +1,5 @@
+All Materials Available in [COMP30024](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/). For **Exam Prep**, suss out [Course Outline & Expectations](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/README.md)
+
 # Complex Decisions      
 ## Mechanism Design
 > The problem of how to design a "game" that maximizes a global utility function in a multi-agent system, given each agent goes for their own strategy
@@ -56,6 +58,7 @@ A mechanism for an auction consists of
 - These agents need a representation language for bids
 
 ### Types of Auctions
+<<<<<<< HEAD
 1. **English Auction**
    - ascending
    - first-price
@@ -102,3 +105,9 @@ A mechanism for an auction consists of
      - harder to **Collusion**: *bidder* can't see shit cause its sealed
      - computational simplicity makes it popular for use in multi-agent AI systems and on-line auctions.
 
+=======
+1. English Auction: Ascending bid
+2. Dutch Auction: Descending bid
+3. First-priced sealed bid auction: One-Shot Bid
+4. Vicerey Auction: Second Price bidding
+>>>>>>> 114bbee80ba271f1020508037b2223e76b9aa733
