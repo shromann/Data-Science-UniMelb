@@ -1,3 +1,7 @@
+---
+title: Data Science @ UniMelb
+---
+
 # Data Science @ UniMelb
 
 A _Collection of Notes_ for Data Science Capstone Subjects, along with _some_ comp electives at **UniMelb** (2021). Enjoy :)
