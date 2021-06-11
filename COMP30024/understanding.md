@@ -1,4 +1,4 @@
-All Materials Available in [COMP30024](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/), for **Exam Prep**, suss out [Course Outline & Expectations](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/README.md)
+All Materials Available in [COMP30024](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/). For **Exam Prep**, suss out [Course Outline & Expectations](https://github.com/shromann/Data-Science-UniMelb/blob/main/COMP30024/README.md)
 
 # Complex Decisions      
 ## Mechanism Design
