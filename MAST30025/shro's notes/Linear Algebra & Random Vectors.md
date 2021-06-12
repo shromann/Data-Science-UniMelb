@@ -1,4 +1,5 @@
-# Linear Algebra 
+# Linear Algebra
+
 ## Basics
 ### Matrix & Manipulation 
 1. Partitioning: we can partition matrices and treat **sub-matrices** like numbers
@@ -84,13 +85,78 @@ $$\frac{\partial z}{\partial \mathbf{y}} = \begin{bmatrix} \partial z/\partial y
   - $z = \mathbf{y}^T\mathbf{y} \implies \frac{\partial z}{\partial \mathbf{y}} = 2\mathbf{y}$
   - $z = \mathbf{y}^TA\mathbf{y} \implies \frac{\partial z}{\partial \mathbf{y}} = A\mathbf{y} + A^T\mathbf{y}$
     - $A$ is symmetric $\implies \frac{\partial z}{\partial \mathbf{y}} = 2A\mathbf{y}$
-  
 
 # Random Vectors
 
+## Basics
 
-> Questions:
-> 1. How does **diagonalisation** work?
-> 2. What does an orthogonal matrix mean?
-> 3. why are eigenvectors are orthogonal for a real and symmetric matrix A?
-> 4. Fuck the theorems aren't clicking (yet aha) 
+Traditionally random variables are denoted with capital letters. However we will denote them by lowercase according to linear algebra notation.
+
+$$\mathbf{y} = \begin{bmatrix} y_1 \\ y_1\\ \vdots \\ y_k\end{bmatrix}$$
+
+- **Expection**: $$E[\mathbf{y}] = \begin{bmatrix} E[y_1] \\ E[y_1]\\ \vdots \\ E[y_k]\end{bmatrix}$$
+	- We can take constant $a$ vectors or matrices out of the **Expectation**
+- **Variance**: $\text{var}\ \mathbf{y} = E[(\mathbf{y}-\mathbf{\mu})(\mathbf{y}-\mathbf{\mu})^T] = (X^TX)^{-1}\sigma^2$ (*for full rank* X)
+	- Diagonals are the variancies of $y_i$
+	- Off-Diagonals are the co-variances of $cov(y_i, y_j)$
+
+## Properties
+
+1. If a is a vector of constants, then $\text{var } a^Ty = a^TVa.$
+2. If A is a matrix of constants, then $\text{var } Ay = AVA^T$ .
+3. V is positive semidefinite.
+
+## Matrix Square Root
+
+$$A^{1/2} = P \Lambda^{1/2}P $$
+
+- Where $P$ diagonalises A
+- Only applies if A is symmetric and postive semidefinite
+
+## Multivariate Normal Distribution
+
+$$\mathbf{x} = A \mathbf{z} + \mathbf{b}$$, $$\mathbf{x} \sim MVN(\mu, \Sigma) = MVN(\mu, AA^T)$$
+
+- z: k, 1 vector of independent standard normal r.vs
+- A: n, k matrix
+- b: n, 1 vector
+- $$\mu + \Sigma^{1/2}\mathbf{z} \sim MVN(\mu, \Sigma)$$ (for any mean and covar matrix
+
+### Combination of MVN
+
+- Any linear combination of multivariate normals results in another multivariatenormal
+	- $y = Ax + b ∼ MVN (Aμ + b, AΣA^T )$
+- If $z = (z_1, z_2)^T$ is multivariate normal, then $z_1$ and $z_2$ are independent if and only if they are uncorrelated.
+	- For example, suppose that z1 ∼ N (0, 1) and u ∼ U (−1, 1), then z2 = z1sign(u) ∼ N (0, 1), but z = (z1, z2)T is not multivariate normal. (Consider its support.) Moreover z1 and z2 are uncorrelated, but clearly dependent.
+
+## Random Quadratic Forms
+
+When the variables in a quadratic form are in Quadratic Form.
+
+$E[y^T A y] = tr(AV) + \mu^T A \mu$
+
+- y: random vector 
+- V: var y
+- A: matrix of constants
+
+## Noncentral $\chi^2$ Distribution
+
+if $y \sim MVN(\mu, I)$ is a k, 1 r.v, then
+
+$x = y^Ty = \sum_{i=1}^{k}y_i^2 \sim \chi^2(k = \text{df}, \lambda=\frac{1}{2}\mu^T\mu)$
+
+- $E [x ] = tr (I_k ) + μ^T μ = k + 2λ.$ (using the random quadratic forms above aha)
+
+	- The noncentrality parameter λ = zero if and only if
+		 μ = 0, in which case x is just the sum of k independent standard normals.
+
+- $\text{var }  x = 2k + 8λ.$
+
+- Let X 2 , . . . , X 2 be a collection of n independent noncentral k1,λ1 kn,λn
+
+	χ2 random variables, with X 2 ∼ χ2 . Then its sum follows the $\chi^2$ distribution with $k = $ sum of k df, and $\lambda = $ sum of lambdas.
+
+	- Setting all lambdas to 0 willl result in sum of independent $\chi^2$ vars, which is just another $\chi^2$ r.v
+
+		
+
