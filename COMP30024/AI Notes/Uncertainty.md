@@ -97,5 +97,10 @@
 
 ## Bayes Rule
 > Useful for understanding `cause` and `effect`
-- $P(Cause|Effect) = \frac{P(Effect|Cause)P(Cause)}{P(Effect)} = \alpha P(Effect|Cause)P(Cause)$
+- $P(Cause|Effect) = \frac{P(Effect|Cause)P(Cause)}{P(Effect)} = \alpha\ P(Effect|Cause)P(Cause)$
+
+## Naive Bayes
+> Conditional Independence + Bayes Rules
+- $P(C, E_1, E_2, ..., E_3) = P(C) \prod_i P(E_i|C)$
+  
  
